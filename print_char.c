@@ -6,7 +6,7 @@
  * @current_n_by: number of bytes printed before now
  * Return: new number of bytes
  */
-int printchar(char **fmt, int current_n_by)
+int print_char(char **fmt, int current_n_by)
 {
 	_putchar(**fmt);
 	current_n_by += 1;
