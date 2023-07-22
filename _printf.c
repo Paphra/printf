@@ -33,8 +33,7 @@ int _printf(const char *format, ...)
 					_putchar('%');
 					n_by += 1;
 					break;
-				case 'i':
-				case 'd':
+				case 'i': case 'd':
 					printint(va_arg(pt, int));
 					break;
 				default:
