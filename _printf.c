@@ -1,5 +1,4 @@
 #include "main.h"
-#define NULL ((void *)0) /*Take this out to the main.h check it works*/
 /**
  * _printf - prints formatted output with some specifiers
  * @format: pointer to the only fixed string argument
@@ -18,24 +17,25 @@ int _printf(const char *format, ...)
 		while (*format != '\0')
 		{
 			if (*format != '%')
-				n_by = _printchar(add_fmt, n_by); /*made short for betty*/
+				n_by = printchar(add_fmt, n_by); /*made short for betty*/
 			else
 			{
 				format++;
 				switch (*format)
 				{
 				case 'c':
-					n_by += printchar(va_arg(pt, int)); /*_putchar directly.*/
+					n_by += _putchar(va_arg(pt, int)); /*_putchar directly?.*/
 					break;
 				case 's':
-					n_by += _printstring(va_arg(pt, char *));
+					n_by += printstring(va_arg(pt, char *));
 					break;
 				case '%':
 					_putchar('%');
 					n_by += 1;
 					break;
-				case 'i': case 'd':
-					_printint(va_arg(pt, int));
+				case 'i':
+				case 'd':
+					printint(va_arg(pt, int));
 					break;
 				default:
 					format++; /*Tested on programmiz. it escapes undefined spec.*/
