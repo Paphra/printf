@@ -1,11 +1,16 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#define NULL ((void *)0)
+
+#include <stdarg.h>
+
 int _printf(const char *format, ...);
 
 int _putchar(char c);
 int _puts(char *str);
-int print_int(int n);
 void print_nothing(void);
+int print_int(int n);
+int print_char(char **fmt, int current_n_by);
 
-#endif /* #ifndef MAIN_H */
+#endif /* MAIN_H */
