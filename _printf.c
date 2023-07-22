@@ -9,7 +9,7 @@
 
 int _printf(const char *format, ...)
 {
-	int i = 0, n_by = 0;
+	int n_by = 0;
 	va_list pt;
 
 	if (format != NULL)
