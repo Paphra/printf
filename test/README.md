@@ -29,7 +29,7 @@ Current YEAR     : 2023
 Current YEAR     : 2023
 Len:[22]
 Len:[22]
-root@77d4f67c086c:~/printf/test# 
+root@77d4f67c086c:~/printf/test#
 ```
 
 I have removed the files but you can reproduce the same following the steps or another approach
