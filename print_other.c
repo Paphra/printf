@@ -13,7 +13,15 @@ int print_other(va_list pt, char c, int curr_n_by)
 	if (c == ' ' || c == '\0')
 		curr_n_by = -1;
 	else if (c == 'b')
-		curr_n_by += print_binary((unsigned int)va_arg(pt, int));
+		curr_n_by += print_base((unsigned int)va_arg(pt, int), 2, -1);
+	else if (c == 'u')
+		curr_n_by += print_uint((unsigned int)va_arg(pt, int));
+	else if (c == 'o')
+		curr_n_by += print_base((unsigned int)va_arg(pt, int), 8, -1);
+	else if (c == 'x')
+		curr_n_by += print_base((unsigned int)va_arg(pt, int), 16, 0);
+	else if (c == 'X')
+		curr_n_by += print_base((unsigned int)va_arg(pt, int), 16, 1);
 	else
 	{
 		_putchar('%');

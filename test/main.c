@@ -161,5 +161,36 @@ int main(void)
 
     _printf("len=%d\n", len);
 
+    _printf("____________TESTING UINT____________\n");
+    len = _printf("UInt:%u\n", UINT_MAX);
+    len2 = printf("UInt:%u\n", UINT_MAX);
+
+    _printf("len=%d\n", len);
+    printf("len2=%d\n", len2);
+
+    _printf("____________TESTING OCTAL___________\n");
+
+    len = _printf("UInt to Octal:%o\n", UINT_MAX);
+    len2 = printf("UInt to Octal:%o\n", UINT_MAX);
+
+    _printf("len=%d\n", len);
+    printf("len2=%d\n", len2);
+
+    _printf("____________TESTING HEX %x___________\n");
+
+    len = _printf("UInt to Hex:%x\n", 17890);
+    len2 = printf("UInt to Hex:%x\n", 17890);
+
+    _printf("len=%d\n", len);
+    printf("len2=%d\n", len2);
+
+    _printf("____________TESTING HEX %X___________\n");
+
+    len = _printf("UInt to Hex:%X\n", 17890);
+    len2 = printf("UInt to Hex:%X\n", 17890);
+
+    _printf("len=%d\n", len);
+    printf("len2=%d\n", len2);
+
     return (0);
 }
