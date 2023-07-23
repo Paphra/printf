@@ -7,15 +7,21 @@
  */
 int nprints_int(int n)
 {
-	int count_neg = 0;
+	unsigned int m, count_neg = 0;
 
 	if (n < 0)
 	{
-		n *= -1;
+		n = -1 * (n + 1);
+		m = n + 1;
 		count_neg = 1;
 	}
-	if (n / 10)
-		return (1 + nprints_int(n / 10) + count_neg);
+	else
+	{
+		m = n;
+	}
+
+	if (m / 10)
+		return (1 + nprints_int(m / 10) + count_neg);
 
 	return (1);
 }
@@ -27,16 +33,23 @@ int nprints_int(int n)
  */
 int print_int_helper(int n)
 {
+	unsigned int m;
+
 	if (n < 0)
 	{
-		n *= -1;
+		n = -1 * (n + 1);
+		m = n + 1;
 		_putchar('-');
 	}
+	else
+	{
+		m = n;
+	}
 
-	if (n / 10)
-		print_int(n / 10);
+	if (m / 10)
+		print_int_helper(m / 10);
 
-	_putchar(n % 10 + '0');
+	_putchar(m % 10 + '0');
 	return (0);
 }
 
