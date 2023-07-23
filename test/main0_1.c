@@ -18,6 +18,20 @@ int main(void)
     int len;
     int len2;
 
+    int num8 = 1000000000;  /*10 digits*/
+    int num9 = -1000000000; /*10 digits*/
+    int num10 = 123;        /*3 digits*/
+
+    int num5 = -9876;
+    int num6 = -123456789;
+    int num7 = INT_MIN;
+
+    int num1 = 12345;
+    int num2 = 0;
+    int num3 = 987654321;
+    int num4 = INT_MAX;
+
+
     _printf("TESTING NULL FORMAT\n");
 
     len = _printf(NULL);
@@ -83,5 +97,57 @@ int main(void)
     _printf("Len:[%d]\n", len);
     printf("Len:[%d]\n", len2);
 
+    _printf("\n::::::MORE TESTS:::::::::\n");
+
+    /*Test cases for positive numbers*/
+    printf("Positive Numbers:\n");
+
+    _printf("num1: %d (bytes printed: %d)\n", num1, print_int(num1));
+    printf("num1: %d (bytes printed: %d)\n", num1, print_int(num1));
+
+    _printf("num2: %d (bytes printed: %d)\n", num2, print_int(num2));
+    printf("num2: %d (bytes printed: %d)\n", num2, print_int(num2));
+
+    _printf("num3: %d (bytes printed: %d)\n", num3, print_int(num3));
+    printf("num3: %d (bytes printed: %d)\n", num3, print_int(num3));
+
+    _printf("num4: %d (bytes printed: %d)\n", num4, print_int(num4));
+    printf("num4: %d (bytes printed: %d)\n", num4, print_int(num4));
+
+    /*Test cases for negative numbers*/
+    printf("\nNegative Numbers:\n");
+
+    _printf("num5: %d (bytes printed: %d)\n", num5, print_int(num5));
+    printf("num5: %d (bytes printed: %d)\n", num5, print_int(num5));
+
+    _printf("num6: %d (bytes printed: %d)\n", num6, print_int(num6));
+    printf("num6: %d (bytes printed: %d)\n", num6, print_int(num6));
+
+    _printf("num7: %d (bytes printed: %d)\n", num7, print_int(num7));
+    printf("num7: %d (bytes printed: %d)\n", num7, print_int(num7));
+
+    /*Test cases for special cases*/
+    printf("\nSpecial Cases:\n");
+
+    _printf("num8: %d (bytes printed: %d)\n", num8, print_int(num8));
+    printf("num8: %d (bytes printed: %d)\n", num8, print_int(num8));
+
+    _printf("num9: %d (bytes printed: %d)\n", num9, print_int(num9));
+    printf("num9: %d (bytes printed: %d)\n", num9, print_int(num9));
+
+    _printf("num10: %d (bytes printed: %d)\n", num10, print_int(num10));
+    printf("num10: %d (bytes printed: %d)\n", num10, print_int(num10));
+
+    len = _printf("SMALL:%d\n", -1);
+    len2 = printf("SMALL:%d\n", -1);
+
+    _printf("len=%d\n", len);
+    printf("len2=%d\n", len2);
+
+    len = _printf("SMALL:%d\n", 5);
+    len2 = printf("SMALL:%d\n", 5);
+
+    _printf("len=%d\n", len);
+    printf("len2=%d\n", len2);
     return (0);
 }
