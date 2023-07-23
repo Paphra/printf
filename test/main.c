@@ -31,7 +31,6 @@ int main(void)
     int num3 = 987654321;
     int num4 = INT_MAX;
 
-
     _printf("TESTING NULL FORMAT\n");
 
     len = _printf(NULL);
@@ -149,5 +148,18 @@ int main(void)
 
     _printf("len=%d\n", len);
     printf("len2=%d\n", len2);
+
+    _printf("____________TESTING BINARY____________\n");
+
+    len = _printf("UInt to Binary:%b\n", 12345);
+    len2 = printf("UInt to Binary:%b\n", 12345);
+
+    _printf("len=%d\n", len);
+    printf("len2=%d\n", len2); /*This is normal... printf doesn't handle it*/
+
+    len = _printf("%b\n", UINT_MAX);
+
+    _printf("len=%d\n", len);
+
     return (0);
 }
