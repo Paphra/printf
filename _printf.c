@@ -39,7 +39,7 @@ int _printf(const char *format, ...)
 					n_by += print_int(va_arg(pt, int));
 					break;
 				default:
-					n_by = print_other(*(format), n_by);
+					n_by = print_other(pt, *(format), n_by);
 					if (n_by == -1)
 						return (n_by);
 					break;
