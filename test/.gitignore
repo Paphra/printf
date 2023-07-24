@@ -1,0 +1,10 @@
+a.out
+main.h
+print_base.c
+print_binary_DELETE.c
+_printf.c
+print_int.c
+print_other.c
+print_uint.c
+_putchar.c
+_puts.c
