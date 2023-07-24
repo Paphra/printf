@@ -28,6 +28,8 @@ int _printf(const char *format, ...)
 					n_by += _putchar((char)va_arg(pt, int));
 				else if (*format ==  's')
 					n_by += _puts(va_arg(pt, char *));
+				else if (*format == 'S')
+					n_by += _handle_S(va_arg(pt, char *));
 				else if (*format == '%')
 					n_by += _putchar('%');
 				else if (*format == 'i' || *format == 'd')

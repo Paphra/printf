@@ -196,5 +196,11 @@ int main(void)
     _printf("len=%d\n", len);
     printf("len2=%d\n", len2);
 
+    _printf("__________TESTING CUSTOM_CONVERSION S______\n");
+    len = _printf("%S\n", "Best\nSchool");
+    
+    _printf("len=%d\n", len);
+    
+    
     return (0);
 }
