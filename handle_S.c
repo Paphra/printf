@@ -18,23 +18,21 @@ int _isprintable(int c)
 int _print_hex(unsigned char c)
 {
 	int nb = 0;
-	char *hex = "0123456789ABCDEF";
 
 	nb += _putchar('\\');
 	nb += _putchar('x');
-	nb += _putchar(hex[(c >> 4) & 0x0F]);
-	nb += _putchar(hex[c & 0x0F]);
+	nb += print_hex(c, 1);
 
 	return (nb);
 }
 /**
- * _handle_S - handles custom conversion specifier
+ * handle_S - handles custom conversion specifier
  * @str: the string
  *
  * Description: handles for non-printable chars
  * Return: num of bytes printed
  */
-int _handle_S(char *str)
+int handle_S(char *str)
 {
 	char *c;
 	int n_by = 0;

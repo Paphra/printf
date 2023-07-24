@@ -7,7 +7,6 @@
  * @format: pointer to the only fixed string argument
  * Return: integer, number of bytes printed
  */
-
 int _printf(const char *format, ...)
 {
 	int n_by = -1;
@@ -29,11 +28,13 @@ int _printf(const char *format, ...)
 				else if (*format ==  's')
 					n_by += _puts(va_arg(pt, char *));
 				else if (*format == 'S')
-					n_by += _handle_S(va_arg(pt, char *));
+					n_by += handle_S(va_arg(pt, char *));
 				else if (*format == '%')
 					n_by += _putchar('%');
 				else if (*format == 'i' || *format == 'd')
 					n_by += print_int(va_arg(pt, int));
+				else if (*format == 'p')
+					n_by += print_pointer(va_arg(pt, void *));
 				else
 				{
 					n_by = print_other(pt, *(format), n_by);
