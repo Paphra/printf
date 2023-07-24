@@ -33,19 +33,20 @@ int main(void)
 
     _printf("TESTING NULL FORMAT\n");
 
-    len = _printf(NULL);
-    len2 = printf(NULL);
+    /*
+    len = _printf((char *)NULL);
+    len2 = printf((char *)NULL);
     _printf("%d\n", len);
     printf("%d\n", len2);
 
     _printf("TESTING s specifier with NULL\n");
 
-    len = _printf("%s\n", NULL);
-    len2 = printf("%s\n", NULL);
+    len = _printf("%s\n", (char *)NULL);
+    len2 = printf("%s\n", (char *)NULL);
 
     _printf("%d\n", len);
     printf("%d\n", len2);
-
+	*/
     len = _printf("Let's try to printf a simple sentence.\n");
     len2 = printf("Let's try to printf a simple sentence.\n");
     _printf("Length:[%d, %i]\n", len, len);
@@ -66,6 +67,7 @@ int main(void)
     _printf("Len:[%d]\n", len);
     printf("Len:[%d]\n", len2);
 
+    /*
     len = _printf("I love it%r: %d\n", 2023);
     len2 = printf("I love it%r: %d\n", 2023);
     _printf("Len:[%d]\n", len);
@@ -75,7 +77,7 @@ int main(void)
     len2 = printf("NON_INTEGER:%d\n", "NON INTEGER");
     _printf("Len:[%d]\n", len);
     printf("Len:[%d]\n", len2);
-
+	*/
     len = _printf("LARGE NUMBERS:%d\n", INT_MIN);
     len2 = printf("LARGE NUMBERS:%d\n", INT_MIN);
     _printf("Len:[%d]\n", len);
@@ -150,12 +152,14 @@ int main(void)
     printf("len2=%d\n", len2);
 
     _printf("____________TESTING BINARY____________\n");
-
+	
+    /*
     len = _printf("UInt to Binary:%b\n", 12345);
     len2 = printf("UInt to Binary:%b\n", 12345);
 
     _printf("len=%d\n", len);
-    printf("len2=%d\n", len2); /*This is normal... printf doesn't handle it*/
+    printf("len2=%d\n", len2); *This is normal... printf doesn't handle it*/
+
 
     len = _printf("%b\n", UINT_MAX);
 

@@ -24,25 +24,19 @@ int _printf(const char *format, ...)
 			else
 			{
 				format++;
-				switch (*format)
-				{
-				case 'c':
+				if (*format == 'c')
 					n_by += _putchar((char)va_arg(pt, int));
-					break;
-				case 's':
+				else if (*format ==  's')
 					n_by += _puts(va_arg(pt, char *));
-					break;
-				case '%':
+				else if (*format == '%')
 					n_by += _putchar('%');
-					break;
-				case 'i': case 'd':
+				else if (*format == 'i' || *format == 'd')
 					n_by += print_int(va_arg(pt, int));
-					break;
-				default:
+				else
+				{
 					n_by = print_other(pt, *(format), n_by);
 					if (n_by == -1)
 						return (n_by);
-					break;
 				}
 			}
 			format++;
