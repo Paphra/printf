@@ -209,6 +209,12 @@ int main(void)
     _printf("len=%d\n", len);
     printf("len2=%d\n", len2);
 
+    len = _printf("Specifier p(NULL): %p\n", NULL);
+    len2 = printf("Specifier p(NULL): %p\n", NULL);
+
+    _printf("len=%d\n", len);
+    printf("len2=%d\n", len2);
+
 
 
     return (0);
