@@ -17,4 +17,6 @@ int print_uint_helper(unsigned int n);
 int print_uint(unsigned int n);
 int print_base(unsigned int n, int b, int flag);
 
+int _handle_S(char *str);
+
 #endif /* #ifndef MAIN_H */

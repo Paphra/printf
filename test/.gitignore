@@ -8,3 +8,5 @@ print_other.c
 print_uint.c
 _putchar.c
 _puts.c
+_handle_S.c
+
