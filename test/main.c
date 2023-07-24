@@ -17,6 +17,7 @@ int main(void)
 {
     int len;
     int len2;
+    int test_var;
 
     int num8 = 1000000000;  /*10 digits*/
     int num9 = -1000000000; /*10 digits*/
@@ -200,7 +201,15 @@ int main(void)
     len = _printf("%S\n", "Best\nSchool");
     
     _printf("len=%d\n", len);
-    
-    
+   
+    _printf("__________TESTING specifier p_____\n");
+    len = _printf("Specifier p: %p\n", (void *)&test_var);
+    len2 = printf("Specifier p: %p\n", (void *)&test_var);
+
+    _printf("len=%d\n", len);
+    printf("len2=%d\n", len2);
+
+
+
     return (0);
 }

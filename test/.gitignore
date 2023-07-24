@@ -8,5 +8,7 @@ print_other.c
 print_uint.c
 _putchar.c
 _puts.c
-_handle_S.c
+handle_S.c
+print_hex.c
+print_pointer.c
 
