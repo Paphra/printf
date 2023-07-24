@@ -34,7 +34,7 @@ int _printf(const char *format, ...)
 				else if (*format == 'i' || *format == 'd')
 					n_by += print_int(va_arg(pt, int));
 				else if (*format == 'p')
-					n_by += print_pointer(va_arg(pt, void *));
+					n_by += print_pointer((void *)va_arg(pt, void *));
 				else
 				{
 					n_by = print_other(pt, *(format), n_by);
