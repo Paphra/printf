@@ -214,7 +214,15 @@ int main(void)
     len = _printf("Specifier p: %p\n", (void *)&db_ptr);
     len2 = printf("Specifier p: %p\n", (void *)&db_ptr);
 
-    len2 = printf("Specifier p: %p\n", &test_var);
+    _printf("__________TESTING specifier flags_____\n");
+    len = _printf("Specifier d with +, ' ': %+d, % d, %+d | space\n", 234, -23, -32);
+    len2 = printf("Specifier d with +, ' ': %+d, % d, %+d | space\n", 234, -23, -32);
 
+    _printf("len=%d\n", len);
+    printf("len2=%d\n", len2);
+    
+    len = _printf("Specifier x with #: %#x, %#X, %#o more\n", 0x3ef, 0x3ef, 23);
+    len2 = printf("Specifier x with #: %#x, %#X, %#o more\n", 0x3ef, 0x3ef, 23);
+    
     return (0);
 }
