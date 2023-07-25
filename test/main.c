@@ -43,7 +43,7 @@ int main(void)
 
     _printf("%d\n", len);
     printf("%d\n", len2);
-	*/
+    */
     len = _printf("Let's try to printf a simple sentence.\n");
     len2 = printf("Let's try to printf a simple sentence.\n");
     _printf("Length:[%d, %i]\n", len, len);
@@ -74,7 +74,7 @@ int main(void)
     len2 = printf("NON_INTEGER:%d\n", "NON INTEGER");
     _printf("Len:[%d]\n", len);
     printf("Len:[%d]\n", len2);
-	*/
+    */
     len = _printf("LARGE NUMBERS:%d\n", INT_MIN);
     len2 = printf("LARGE NUMBERS:%d\n", INT_MIN);
     _printf("Len:[%d]\n", len);
@@ -149,14 +149,13 @@ int main(void)
     printf("len2=%d\n", len2);
 
     _printf("____________TESTING BINARY____________\n");
-	
+
     /*
     len = _printf("UInt to Binary:%b\n", 12345);
     len2 = printf("UInt to Binary:%b\n", 12345);
 
     _printf("len=%d\n", len);
     printf("len2=%d\n", len2); *This is normal... printf doesn't handle it*/
-
 
     len = _printf("%b\n", UINT_MAX);
 
@@ -195,9 +194,9 @@ int main(void)
 
     _printf("__________TESTING CUSTOM_CONVERSION S______\n");
     len = _printf("%S\n", "Best\nSchool");
-    
+
     _printf("len=%d\n", len);
-   
+
     _printf("__________TESTING specifier p_____\n");
     len = _printf("Specifier p: %p\n", (void *)&test_var);
     len2 = printf("Specifier p: %p\n", (void *)&test_var);
@@ -220,9 +219,26 @@ int main(void)
 
     _printf("len=%d\n", len);
     printf("len2=%d\n", len2);
-    
+
     len = _printf("Specifier x with #: %#x, %#X, %#o more\n", 0x3ef, 0x3ef, 23);
     len2 = printf("Specifier x with #: %#x, %#X, %#o more\n", 0x3ef, 0x3ef, 23);
-    
+
+    printf("______________\n");
+
+    len = _printf("%r\n", "Hello world");
+    _printf("len=%d\n", len);
+
+    printf("______________\n");
+
+    len = _printf("%r\n", "");
+    _printf("len=%d\n", len);
+
+    printf("______________\n");
+
+    len = _printf("%r\n", NULL);
+    _printf("len=%d\n", len);
+
+    printf("______________\n");
+
     return (0);
 }
