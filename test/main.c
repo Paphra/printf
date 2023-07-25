@@ -223,7 +223,7 @@ int main(void)
     len = _printf("Specifier x with #: %#x, %#X, %#o more\n", 0x3ef, 0x3ef, 23);
     len2 = printf("Specifier x with #: %#x, %#X, %#o more\n", 0x3ef, 0x3ef, 23);
 
-    printf("______________\n");
+    printf("________TESTING REVERSE%r______\n");
 
     len = _printf("%r\n", "Hello world");
     _printf("len=%d\n", len);
@@ -236,6 +236,23 @@ int main(void)
     printf("______________\n");
 
     len = _printf("%r\n", NULL);
+    _printf("len=%d\n", len);
+
+    printf("______________\n");
+
+    printf("________TESTING ROT13______\n");
+
+    len = _printf("%R\n", "Hello world");
+    _printf("len=%d\n", len);
+
+    printf("______________\n");
+
+    len = _printf("%R\n", "");
+    _printf("len=%d\n", len);
+
+    printf("______________\n");
+
+    len = _printf("%R\n", NULL);
     _printf("len=%d\n", len);
 
     printf("______________\n");

@@ -38,6 +38,8 @@ int print_other(va_list pt, const char *format, int c_by)
 		c_by += print_base((ui)va_arg(pt, int), 16, 1);
 	else if (*format == 'r')
 		c_by += print_rev(va_arg(pt, char *));
+	else if (*format == 'R')
+		c_by += rot13(va_arg(pt, char *));
 	else if (_isflag(*format))
 	{
 		c_by += handle_flags(format, (ui)va_arg(pt, int));
