@@ -17,4 +17,8 @@ int print_uint_helper(unsigned int n);
 int print_uint(unsigned int n);
 int print_base(unsigned int n, int b, int flag);
 
+int handle_S(char *str);
+int print_hex(unsigned char c, int u);
+int print_pointer(void *p);
+
 #endif /* #ifndef MAIN_H */
