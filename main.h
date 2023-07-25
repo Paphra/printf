@@ -27,5 +27,6 @@ int _isflag(char);
 
 int _strlen(char *str);
 int print_rev(char *str);
+int rot13(char *str);
 
 #endif /* #ifndef MAIN_H */
