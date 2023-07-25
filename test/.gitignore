@@ -12,4 +12,5 @@ handle_S.c
 print_hex.c
 print_pointer.c
 handle_flags.c
+print_rev.c
 

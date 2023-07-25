@@ -6,7 +6,7 @@
  * @c: the char
  * Return: 1 - if true, else 0
  */
-int _isflag (char c)
+int _isflag(char c)
 {
 	if (c == '+' || c == '0' || c == ' ' || c == '#')
 		return (1);
@@ -36,11 +36,14 @@ int print_other(va_list pt, const char *format, int c_by)
 		c_by += print_base((ui)va_arg(pt, int), 16, 0);
 	else if (*format == 'X')
 		c_by += print_base((ui)va_arg(pt, int), 16, 1);
+	else if (*format == 'r')
+		c_by += print_rev(va_arg(pt, char *));
 	else if (_isflag(*format))
 	{
 		c_by += handle_flags(format, (ui)va_arg(pt, int));
 		format++;
-	} else
+	}
+	else
 	{
 		_putchar('%');
 		_putchar(*format);
