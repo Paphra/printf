@@ -5,6 +5,11 @@
 
 /**
  * main - Entry point
+ * test for integer (%i and %d) but also others
+ * Return: Always 0
+ */
+/**
+ * main - Entry point
  *
  * Return: Always 0
  */
@@ -13,7 +18,6 @@ int main(void)
     int len;
     int len2;
     int test_var;
-    int *db_ptr;
 
     int num8 = 1000000000;  /*10 digits*/
     int num9 = -1000000000; /*10 digits*/
@@ -211,18 +215,7 @@ int main(void)
     _printf("len=%d\n", len);
     printf("len2=%d\n", len2);
 
-    len = _printf("Specifier p: %p\n", (void *)&db_ptr);
-    len2 = printf("Specifier p: %p\n", (void *)&db_ptr);
 
-    _printf("__________TESTING specifier flags_____\n");
-    len = _printf("Specifier d with +, ' ': %+d, % d, %+d | space\n", 234, -23, -32);
-    len2 = printf("Specifier d with +, ' ': %+d, % d, %+d | space\n", 234, -23, -32);
 
-    _printf("len=%d\n", len);
-    printf("len2=%d\n", len2);
-    
-    len = _printf("Specifier x with #: %#x, %#X, %#o more\n", 0x3ef, 0x3ef, 23);
-    len2 = printf("Specifier x with #: %#x, %#X, %#o more\n", 0x3ef, 0x3ef, 23);
-    
     return (0);
 }

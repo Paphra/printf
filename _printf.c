@@ -31,13 +31,13 @@ int _printf(const char *format, ...)
 					n_by += handle_S(va_arg(pt, char *));
 				else if (*format == '%')
 					n_by += _putchar('%');
+				else if (*format == 'i' || *format == 'd')
+					n_by += print_int(va_arg(pt, int));
 				else if (*format == 'p')
 					n_by += print_pointer((void *)va_arg(pt, void *));
 				else
 				{
-					n_by = print_other(pt, format, n_by);
-					if (_isflag(*format))
-						format++;
+					n_by = print_other(pt, *(format), n_by);
 					if (n_by == -1)
 						return (n_by);
 				}
