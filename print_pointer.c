@@ -11,7 +11,7 @@ int print_pointer(void *p)
 	int i;
 	int n_by = 0;
 	unsigned char *ptr;
-	
+
 	if (p != NULL)
 	{
 		ptr = (unsigned char *) &p;
